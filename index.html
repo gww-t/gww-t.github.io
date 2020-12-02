@@ -64,6 +64,49 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-新手搭建博客 - 副本" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/12/02/%E6%96%B0%E6%89%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%20-%20%E5%89%AF%E6%9C%AC/" class="article-date">
+  <time datetime="2020-12-02T04:58:26.505Z" itemprop="datePublished">2020-12-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>title:<br>前言：作为一名新手上周在学姐的帮助下成功搭建博客，今天分享一下我搭建博客的过程。</p>
+<p><strong>相关步骤</strong></p>
+<p>第一步：安装Node.js和配置Node.js环境</p>
+<p>进入Node.js官网并下载最新版本并将其安装好之后可以检测一下PATH环境是否配置了Node.js。</p>
+<p> <strong>安装好的标志</strong>：</p>
+<p>打开命令提示符（cmd)，输入命令node -v和npm -v后如图所示</p>
+<p><img src="https://img-blog.csdnimg.cn/2020113019362242.png" alt="在这里插入图片描述"></p>
+<p>第二步：安装Git和配置Git环境<br>进入Git官网，下载最新版本并安装。<br><strong>安装好的标志</strong>：在电脑任意位置单击鼠标右键，后又俩个选项：Git Bash Here和Git GUI Here</p>
+<p>第三步：Github账户的注册和新建项目<br><strong>注意</strong>：账户名.github.io，并且需要勾选Initialize this repository with a README</p>
+<p>第四步：安装Hexo，在自己认为合适的地方创个文件夹。然后通过命令行进入到该文件夹里面</p>
+<p>输入npm install hexo -g，开始安装Hexo<br><img src="https://img-blog.csdnimg.cn/20201130195416471.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl81MjQ5MTkyMQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>输入hexo -v，检查hexo是否安装成功<br><img src="https://img-blog.csdnimg.cn/20201130195534336.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl81MjQ5MTkyMQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>输入hexo init，初始化该文件夹（过程漫长，耐心等待）</p>
+<p>输入npm install，安装所需要的组件，整个过程完成以后可以输入hexo g，首次体验Hexo</p>
+<p>输入hexo s，开启服务器，访问该网址，正式体验Hexo</p>
+<p>第五步:将Hexo与Github page联系起来，设置Git的username 和email</p>
+<p>首先配置Deployment，在其文件夹中，找到_config.yml文件，修改repo 值（repo值是你在github项目里的ssh），然后安装一个扩展</p>
+<p>在一个文件夹里面点击鼠标右键，点击Git Bash Here<br>1.输入cd ~/.ssh，查看是否有.ssh的文件夹<br>2.输入ls，列出该文件下的内容<br>3.输入ssh-keygen -t rsa -C “”（引号内输入个人邮箱），连续三个回车，生成密钥，最后得到了两个文件：id_rsa和id_rsa.pub<br>4.输入eval “$(ssh-agent -s)”，添加密钥到ssh-agent<br>5.再输入ssh-add ~/.ssh/id_rsa，添加生成的SSH key到ssh-agent<br>6.登录Github，点击头像下的settings，点击”SSH and GPG keys”<br>7.然后点击”New SSH key”新建SSH keys(title 可以随便写)，将id_rsa.pub文件里的内容复制在key框里（注意是id_rsa.pub文件）<br>8.输入ssh -T <a href="mailto:&#x67;&#105;&#x74;&#x40;&#x67;&#x69;&#x74;&#104;&#117;&#98;&#x2e;&#x63;&#111;&#109;">&#x67;&#105;&#x74;&#x40;&#x67;&#x69;&#x74;&#104;&#117;&#98;&#x2e;&#x63;&#111;&#109;</a>，测试添加ssh是否成功<br><strong>成功的标志</strong>：看到Hi后面是你的用户名</p>
+<p>第六步：部署到Github<br>使用命令：hexo d -g 部署成功后便可访问地址：http://用户名.github.io 即可访问自己的博客</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/12/02/%E6%96%B0%E6%89%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%20-%20%E5%89%AF%E6%9C%AC/" data-id="cki6y0lwc0000eost6n3fb9o9" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-My-New-Post" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/12/01/My-New-Post/" class="article-date">
@@ -91,49 +134,6 @@
     </div>
     <footer class="article-footer">
       <a data-url="http://example.com/2020/12/01/My-New-Post/" data-id="cki6566f00000g4stbblqfv6w" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-新手搭建博客" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/12/01/%E6%96%B0%E6%89%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" class="article-date">
-  <time datetime="2020-12-01T13:15:46.905Z" itemprop="datePublished">2020-12-01</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>前言：作为一名新手上周在学姐的帮助下成功搭建博客，今天分享一下我搭建博客的过程。</p>
-<p><strong>相关步骤</strong></p>
-<p>第一步：安装Node.js和配置Node.js环境</p>
-<p>进入Node.js官网并下载最新版本并将其安装好之后可以检测一下PATH环境是否配置了Node.js。</p>
-<p> <strong>安装好的标志</strong>：</p>
-<p>打开命令提示符（cmd)，输入命令node -v和npm -v后如图所示</p>
-<p><img src="https://img-blog.csdnimg.cn/2020113019362242.png" alt="在这里插入图片描述"></p>
-<p>第二步：安装Git和配置Git环境<br>进入Git官网，下载最新版本并安装。<br><strong>安装好的标志</strong>：在电脑任意位置单击鼠标右键，后又俩个选项：Git Bash Here和Git GUI Here</p>
-<p>第三步：Github账户的注册和新建项目<br><strong>注意</strong>：账户名.github.io，并且需要勾选Initialize this repository with a README</p>
-<p>第四步：安装Hexo，在自己认为合适的地方创个文件夹。然后通过命令行进入到该文件夹里面</p>
-<p>输入npm install hexo -g，开始安装Hexo<br><img src="https://img-blog.csdnimg.cn/20201130195416471.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl81MjQ5MTkyMQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>输入hexo -v，检查hexo是否安装成功<br><img src="https://img-blog.csdnimg.cn/20201130195534336.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl81MjQ5MTkyMQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>输入hexo init，初始化该文件夹（过程漫长，耐心等待）</p>
-<p>输入npm install，安装所需要的组件，整个过程完成以后可以输入hexo g，首次体验Hexo</p>
-<p>输入hexo s，开启服务器，访问该网址，正式体验Hexo</p>
-<p>第五步:将Hexo与Github page联系起来，设置Git的username 和email</p>
-<p>首先配置Deployment，在其文件夹中，找到_config.yml文件，修改repo 值（repo值是你在github项目里的ssh），然后安装一个扩展</p>
-<p>在一个文件夹里面点击鼠标右键，点击Git Bash Here<br>1.输入cd ~/.ssh，查看是否有.ssh的文件夹<br>2.输入ls，列出该文件下的内容<br>3.输入ssh-keygen -t rsa -C “”（引号内输入个人邮箱），连续三个回车，生成密钥，最后得到了两个文件：id_rsa和id_rsa.pub<br>4.输入eval “$(ssh-agent -s)”，添加密钥到ssh-agent<br>5.再输入ssh-add ~/.ssh/id_rsa，添加生成的SSH key到ssh-agent<br>6.登录Github，点击头像下的settings，点击”SSH and GPG keys”<br>7.然后点击”New SSH key”新建SSH keys(title 可以随便写)，将id_rsa.pub文件里的内容复制在key框里（注意是id_rsa.pub文件）<br>8.输入ssh -T <a href="mailto:&#103;&#x69;&#x74;&#x40;&#103;&#x69;&#116;&#x68;&#x75;&#x62;&#x2e;&#x63;&#x6f;&#x6d;">&#103;&#x69;&#x74;&#x40;&#103;&#x69;&#116;&#x68;&#x75;&#x62;&#x2e;&#x63;&#x6f;&#x6d;</a>，测试添加ssh是否成功<br><strong>成功的标志</strong>：看到Hi后面是你的用户名</p>
-<p>第六步：部署到Github<br>使用命令：hexo d -g 部署成功后便可访问地址：http://用户名.github.io 即可访问自己的博客</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/12/01/%E6%96%B0%E6%89%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" data-id="cki60lj8o0000psstf2kians4" class="article-share-link">Share</a>
       
       
     </footer>
@@ -174,11 +174,11 @@
       <ul>
         
           <li>
-            <a href="/2020/12/01/My-New-Post/">My New Post</a>
+            <a href="/2020/12/02/%E6%96%B0%E6%89%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%20-%20%E5%89%AF%E6%9C%AC/">(no title)</a>
           </li>
         
           <li>
-            <a href="/2020/12/01/%E6%96%B0%E6%89%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">(no title)</a>
+            <a href="/2020/12/01/My-New-Post/">My New Post</a>
           </li>
         
       </ul>
